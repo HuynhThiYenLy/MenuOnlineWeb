@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- Các thẻ meta cần thiết -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Quản trị Regal</title>
+    <!-- Các file CSS -->
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+    <!-- Nội dung trang web -->
+    <div class="container-scroller">
+        <!-- Navbar -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg"
+                        alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg"
+                        alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="search">
+                                    <i class="icon-search"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Tìm kiếm dự án.." aria-label="search"
+                                aria-describedby="search">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown d-lg-flex d-none">
+                        <button type="button" class="btn btn-info font-weight-bold">+ Tạo mới</button>
+                    </li>
+                    <li class="nav-item dropdown d-flex">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
+                            id="messageDropdown" href="#" data-toggle="dropdown">
+                            <i class="icon-air-play mx-0"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="messageDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Tin nhắn</p>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        Cuộc họp đã bị hủy
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        Ra mắt sản phẩm mới
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
+                                </div>
+                                <div class="preview-item-content flex-grow">
+                                    <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                                    </h6>
+                                    <p class="font-weight-light small-text text-muted mb-0">
+                                        Cuộc họp hội đồng sắp tới
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-flex mr-4 ">
+                        <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
+                            id="notificationDropdown" href="#" data-toggle="dropdown">
+                            <i class="icon-cog"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                            aria-labelledby="notificationDropdown">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">Cài đặt</p>
+                            <a class="dropdown-item preview-item">
+                                <i class="icon-head"></i> Hồ sơ
+                            </a>
+                            <a class="dropdown-item preview-item">
+                                <i class="icon-inbox"></i> Đăng xuất
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown mr-4 d-lg-flex d-none">
+                        <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="#">
+                            <i class="icon-grid"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Sidebar và nội dung chính -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- Sidebar -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <div class="user-profile">
+                    <div class="user-image">
+                        <img src="../../images/faces/face28.png">
+                    </div>
+                    <div class="user-name">
+                        Edward Spencer
+                    </div>
+                    <div class="user-designation">
+                        Nhà phát triển
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <i class="icon-box menu-icon"></i>
+                            <span class="menu-title">Bảng điều khiển</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="icon-disc menu-icon"></i>
+                            <span class="menu-title">Danh mục</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/typography.html">Danh mục</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/addCategory.html">Thêm danh mục</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <i class="icon-disc menu-icon"></i>
+                            <span class="menu-title">Sản phẩm</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/products.html">Sản phẩm</a>
+                                </li>
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="../../pages/ui-features/addProduct.html">Thêm sản phẩm</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Người
+                            dùng</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/bill.html">Hóa đơn</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Form thêm sản phẩm -->
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <form class="forms-sample" id="addProductForm">
+                        <div class="form-group">
+                            <label for="productName">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Nhập tên sản phẩm">
+                        </div>
+                        <div class="form-group">
+                            <label for="productPrice">Giá</label>
+                            <input type="text" class="form-control" id="productPrice" placeholder="Nhập giá">
+                        </div>
+                        <div class="form-group">
+                            <label for="productSize">Kích thước</label>
+                            <input type="text" class="form-control" id="productSize" placeholder="Nhập kích thước">
+                        </div>
+                        <div class="form-group">
+                            <label for="productXuatXu">Xuất xứ</label>
+                            <input type="text" class="form-control" id="productXuatXu" placeholder="Nhập xuất xứ">
+                        </div>
+                        <div class="form-group">
+                            <label for="productTinhTrang">Tình trạng</label>
+                            <input type="text" class="form-control" id="productTinhTrang" placeholder="Nhập tình trạng">
+                        </div>
+                        <div class="form-group">
+                            <label for="productImage">File ảnh</label>
+                            <input type="text" class="form-control" id="productImg" placeholder="Nhập link ảnh">
+                        </div>
+                        <div class="form-group">
+                            <label for="parentCategory">Danh mục cha</label>
+                            <select class="form-control" id="parentCategory">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subCategory">Danh mục con</label>
+                            <select class="form-control" id="subCategory">
+                                <!-- sellect là dropduwn -->
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary me-2">Gửi</button>
+                        <button type="button" class="btn btn-light" onclick="cancel()">Hủy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Container Scroller -->
+
+    <!-- JavaScript dependencies -->
+    <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+
+    <script>
+        // Lấy danh sách danh mục cha và hiển thị trong dropdown menu
+        fetch("http://192.168.211.1:3000/category/getparent")
+            .then(response => response.json())
+            .then(data => {
+                const parentCategory = document.getElementById("parentCategory");
+                parentCategory.innerHTML = `<option value="">Chọn danh mục</option>`;
+                data.forEach(item => {
+                    parentCategory.innerHTML += `<option value="${item._id}">${item.name}</option>`;
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+        document.getElementById("parentCategory").addEventListener('change', (event) => { // change theo dõi khi parentCategory thay đổi.
+            const parentID = event.target.value; // Lấy id cha được chọn từ option dropdown
+            fetch(`http://192.168.211.1:3000/category/getparent/` + parentID)
+                .then(response => response.json())
+                .then(data => {
+                    const subCategory = document.getElementById("subCategory");
+                    subCategory.innerHTML = `<option value="">Chọn loại sản phẩm</option>`
+
+                    data.forEach(item => {
+                        subCategory.innerHTML += `<option value="${item._id}">${item.name}</option>`;
+                    });
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        });
+
+        document.getElementById("addProductForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // ngăn chặn hành vi mặc định
+
+            const productName = document.getElementById("productName").value;
+            const productPrice = document.getElementById("productPrice").value;
+            const productImg = document.getElementById("productImg").value;
+            const productSize = document.getElementById("productSize").value;
+            const productXuatXu = document.getElementById("productXuatXu").value;
+            const productTinhTrang = document.getElementById("productTinhTrang").value;
+            const productCategory = document.getElementById("subCategory").value;
+
+            fetch("http://192.168.211.1:3000/product/add", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ // dữ liệu gửi
+                    name: productName,
+                    gia: productPrice,
+                    img: productImg,
+                    kichCo: productSize,
+                    xuatXu: productXuatXu,
+                    tinhTrang: productTinhTrang,
+                    categoryID: productCategory
+                })
+            })
+                .then(response => {
+                    if (response.status == 201) {
+                        alert('Thêm sản phẩm thành công');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Có vấn đề xảy ra khi fetch:', error);
+                });
+        });
+
+
+        // Đặt lại form
+        function cancel() {
+            document.getElementById("addProductForm").reset();
+        }
+    </script>
+
+</body>
+
+</html>

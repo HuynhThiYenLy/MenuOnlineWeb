@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên mật khẩu</title>
+</head>
+
+<body>
+    <h2>Quên mật khẩu</h2>
+    <form id="forgotPassForm">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="newPassword">Mật khẩu mới:</label><br>
+        <input type="password" id="newPassword" name="newPassword" required><br><br>
+        <button type="submit">Gửi yêu cầu</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById("forgotPassForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const email = formData.get('email');
+            const newPassword = formData.get('newPassword');
+
+            try {
+                const response = await fetch('http://localhost:3000/admin/quenmatkhau', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username: email, newPassword })
+                });
+
+                const data = await response.json();
+
+                if (response.status == 200) {
+                    document.getElementById("message").innerHTML = '<div style="color:green;">' + data.message + '</div>';
+                } else {
+                    document.getElementById("message").innerHTML = '<div style="color:red;">' + data.error + '</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById("message").innerHTML = '<div style="color:red;">Có lỗi xảy ra, vui lòng thử lại sau.</div>';
+            }
+        });
+    </script>
+</body>
+
+</html>
